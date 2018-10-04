@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "A app to get feedbacls\u001b[D\u001b[D\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[C\u001bks/surveys from ema\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[3~\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001bvia email",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PPP\u001b[D\u001b[Dradhumna Pancholi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
