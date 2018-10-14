@@ -4,7 +4,7 @@
   "description": "A app to get feedbacls\u001b[D\u001b[D\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[C\u001bks/surveys from ema\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[3~\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001bvia email",
   "main": "index.js",
   "engines": {
-    "node":"8.1.1",
+    "node": "8.1.1",
     "npm": "5.0.3"
   },
   "scripts": {
@@ -13,6 +13,8 @@
   "author": "PPP\u001b[D\u001b[Dradhumna Pancholi",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0"
   }
 }
