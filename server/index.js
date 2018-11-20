@@ -20,8 +20,6 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
-//to enable proxy//
-app.enable("trust proxy");
 //auth routes//
 require('./routes/authRoutes')(app);
 
