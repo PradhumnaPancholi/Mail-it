@@ -1,17 +1,28 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
 
 class Header extends Component{
+  renderContent(){
+      switch(this.props.auth){
+        case null:
+          return; //user will not see wrong data if req takes more time to finisf
+        case false:
+          return <li><a href = "/auth/google">Log in with Google</a></li>;
+        default:
+          return <li><a href = "">Log out</a></li>;
+      }
+  }
+
   render(){
+    console.log(this.props);
     return(
         <nav>
           <div className="nav-wrapper blue-grey darken-3">
             <a className="left brand-logo">
-            FeedBack
+            Mail It
             </a>
             <ul className="right">
-              <li>
-                <a>Login with Google</a>
-              </li>
+              {this.renderContent()}
             </ul>
           </div>
         </nav>
@@ -19,4 +30,8 @@ class Header extends Component{
   }
 }
 
-export default Header;
+function mapStateToProps({auth}){
+  return {auth};
+}
+
+export default connect(mapStateToProps)(Header);
