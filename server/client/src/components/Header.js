@@ -1,15 +1,16 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
 
 class Header extends Component{
   renderContent(){
       switch(this.props.auth){
         case null:
-          return; //user will not see wrong data if req takes more time to finisf
+          return; //user will not see wrong data if req takes more time to finish
         case false:
           return <li><a href = "/auth/google">Log in with Google</a></li>;
         default:
-          return <li><a href = "">Log out</a></li>;
+          return <li><a href = "/api/logout">Log out</a></li>;
       }
   }
 
@@ -18,9 +19,12 @@ class Header extends Component{
     return(
         <nav>
           <div className="nav-wrapper blue-grey darken-3">
-            <a className="left brand-logo">
-            Mail It
-            </a>
+            <Link
+              to={this.props.auth ? '/dashboard' : '/'}
+              className="left brand-logo"
+            >
+              Mail It
+            </Link>
             <ul className="right">
               {this.renderContent()}
             </ul>

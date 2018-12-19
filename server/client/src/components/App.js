@@ -4,11 +4,11 @@ import {connect} from 'react-redux';
 import * as actions from '../actions';
 
 import Header from './Header';
+import Landing from './Landing';
 
 //temp components to verify routes//
 const Dashboard = () => <h2>Dashboard</h2>
 const SurveyNew = () => <h2>Add a new survey</h2>
-const Landing = () => <h2>Landing</h2>
 
 class App extends Component{
 
@@ -23,7 +23,7 @@ class App extends Component{
           <div>
             <Header />
             <Route exact path="/" component={Landing} />
-            <Route exact path="/surveys" component={Dashboard} />
+            <Route exact path="/dashboard" component={Dashboard} />
             <Route path="/surveys/new" component={SurveyNew} />
           </div>
         </BrowserRouter>
