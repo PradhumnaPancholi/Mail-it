@@ -5,7 +5,7 @@ const Landing = () =>{
     <div>
       <div className="row">
         <div className="col l6 col s12">
-          <img class="responsive-img" src="https://images.unsplash.com/photo-1524821505188-18975b5a913f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=764&q=80" />
+          <img className="responsive-img" src="https://images.unsplash.com/photo-1524821505188-18975b5a913f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=764&q=80" />
         </div>
         <div className="col l6 col s12">
           <h1 className="center-align">Make things happen</h1>
