@@ -25,6 +25,17 @@ app.use(passport.session());
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
 
+//for production//
+if(process.env.NODE_ENV === 'production')
+{
+  //to provide production assests if path doen't match ant of node routes//
+  app.use(express.static('client/build'));
+  //if match not found in 'client/build', send index.html as response//
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
 console.log('feedback is running');
