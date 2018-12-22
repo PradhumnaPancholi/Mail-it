@@ -1,6 +1,6 @@
 const passport = require('passport');
 
-module.exports = (app) => {
+module.exports = app => {
   //route to "sign in with ggogle"//
   app.get('/auth/google', passport.authenticate('google', {
       scope: ['profile', 'email']
