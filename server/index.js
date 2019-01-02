@@ -34,7 +34,7 @@ if(process.env.NODE_ENV === 'production')
   //if match not found in 'client/build', send index.html as response//
   const path = require('path');
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, './client/build/index.html'));
   });
 }
 const PORT = process.env.PORT || 5000;

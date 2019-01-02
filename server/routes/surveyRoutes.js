@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const Survey = require('../models/Survey');
 
 module.exports = app =>{
-  app.post('/api/survey', requireLogin, requireCredit, (req, res) => {
+  app.post('/api/survey', requireLogin, requireCredits, (req, res) => {
 
     //taking data from body//
     const{ title,subject,body,recipients } = req.body;
