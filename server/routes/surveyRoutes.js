@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const Survey = require('../models/Survey');
 
 module.exports = app =>{
-  app.post('/api/survey', requireLogin, requireCredits, (req, res) => {
+  app.post('/api/surveys', requireLogin, requireCredits, (req, res) => {
 
     //taking data from body//
     const{ title,subject,body,recipients } = req.body;
@@ -21,7 +21,8 @@ module.exports = app =>{
       dateCreated: Date.now()
     });
 
-    //to creata a new mailer object//
+    //to creat a new mailer object//
     const mailer = new Mailer(survey, surveyTemplate(survey));
+    mailer.send();
   });
 };
