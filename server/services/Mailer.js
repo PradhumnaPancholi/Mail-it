@@ -43,12 +43,12 @@ class Mailer extends helper.Mail{
     //to send request to sendgrid//
     async send() {
       const request = this.sgAPI.emptyRequest({
-        method = 'POST',
-        path = 'v3/mail/send/'
-        body = this.JSON()
+        method: 'POST',
+        path: 'v3/mail/send/',
+        body: this.JSON()
       });
 
-      this.sgAPI.API(reqest);
+      const response = this.sgAPI.API(request);
       return response;
     }
 }
